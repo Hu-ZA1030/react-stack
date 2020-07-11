@@ -17,5 +17,4 @@ class TestHoc extends React.Component{
         )
     }
 }
-
 export default hoc(TestHoc)

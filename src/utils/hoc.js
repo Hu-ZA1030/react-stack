@@ -36,7 +36,6 @@ export default function hoc(WrappedComponent){
          <div key={ele.id}>{ele.label}</div>
          ))   
         }
-
         render(){
             return(
                 <div>
@@ -45,7 +44,6 @@ export default function hoc(WrappedComponent){
                     onTest={this.click.bind(this)}
                     onInit={this.createList.bind(this)}
                     >
-
                     </WrappedComponent>
                     <h3>hoc footer</h3>
                 </div>

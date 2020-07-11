@@ -31,7 +31,7 @@ componentDidMount(){
 
 // 更新阶段
 
-// 这个生命周期函数是Diff 运输g的开关
+// 这个生命周期函数是Diff 运算的开关
 // 意思是：当前页面是否更新？ 返回值是一个布尔值
 // 但是一般也很少使用
 shouldComponentUpdate(){

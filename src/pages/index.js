@@ -9,6 +9,7 @@ import Life from "./study/life"
 import Fragment from "./study/fragment"
 import Testctx from "./study/testctx"
 import Testhoc from "./study/testhoc"
+import Testhook from "./study/hook"
 import Home from "./home"
 import HomeDetail from "./home/detail"
 
@@ -80,12 +81,12 @@ export default [
         component:Testhoc,
         text:"高阶组件"
     },
-    // {
-    //     id:12,
-    //     path:"/jsx",
-    //     component:Jsx,
-    //     text:"Jsx学习"
-    // },
+    {
+        id:11,
+        path:"/testhook",
+        component:Testhook,
+        text:"Hooks学习"
+    },
     // {
     //     id:13,
     //     path:"/hook",
@@ -93,13 +94,13 @@ export default [
     //     text:"Hooks学习"
     // },
     {
-        id:11,
+        id:12,
         path:"/",
         component:Home,
         text:"我的首页",
         children:[
             {
-                id:1101,
+                id:1201,
                 path:"/home/detail/:id/:name",
                 component:HomeDetail,
                 text:"详情页"
