@@ -42,7 +42,7 @@ var config = {
             {test:/\.(css|scss)$/,use:['style-loader','css-loader',"sass-loader"]},
             {test:/\.(png|svg|jpg|gif)$/,use:["file-loader"]},
             // exclude 不包含，就是忽略node_modules
-            {test:/\.js$/,exclude:/node_modules/,use:["babel-loader"]}
+            {test:/\.(js|jsx)$/,exclude:/node_modules/,use:["babel-loader"]}
         ]
      },
 
@@ -50,7 +50,8 @@ var config = {
          alias:{
             //  当我们引入文件就可以使用 @ 引入
              "@":path.resolve(__dirname,"./src")
-         }
+         },
+         extensions:[".js",".json"] // 导入时可以省略后缀名
      },
 
 }
@@ -75,9 +76,17 @@ if(env == "development"){
         contentBase:path.resolve(__dirname,"./public"),
         open:true, // 自动打开浏览器
         hot:true, //开启热更新
+        overlay:{ // 报错时出现浮层
+            errors:true
+        }
      }
 
-
+     config.module.rules.push({
+         test:/\.js$/,
+         exclude:/node_modules/,
+         use:["eslint-loader"],
+         enforce:"pre",//babel编译之前进行代码检查
+     }) 
 }
 
 

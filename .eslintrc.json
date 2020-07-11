@@ -1,0 +1,16 @@
+{
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "rules": {
+        // "semi": "error" 错误 h  2
+        // "semi": "warn" // 警告  1
+        "semi":0, //  或者off 就不会报分号错误
+        "no-console":"off"
+        // "no-multi-spaces":"error"
+    }
+}
